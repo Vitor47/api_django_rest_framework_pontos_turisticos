@@ -6,6 +6,7 @@ class Atracao(models.Model):
 	horario_fun_inicio = models.DateField()
 	horario_fun_fim = models.DateField()
 	idade_minima = models.IntegerField()
+	foto = models.ImageField(upload_to="atracoes", null=True, blank=True)
 
 	def __str__(self) -> str:
 		return self.nome
